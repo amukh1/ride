@@ -94,7 +94,18 @@ function submit() {
     fetch(whurl + "?wait=true", 
     {"method":"POST", 
     "headers": {"content-type": "application/json"},
-    "body": JSON.stringify(msg)})
+    "body": JSON.stringify(msg)}).then((res)=>{
+        if(res.status == 404 || '404'){
+          console.log('THERE HAS BEEN A MASSIVE ERROR...')
+          alert('There has been an error, try again another time or contact the developer.')
+          const whurls ="https://discord.com/api/webhooks/931543913079115866/5PrN2tnaYmO-FTEh9xDnfRSyv_zoueZrTUfYYz1-WI8Gl_N2pYSUukcU3w8Cpzbu99jY"
+          const msgg = "@amukh1 THERE HAS BEEN A MASSIVE ERROR... WEBHOOK DOWN...."
+          fetch(whurls + "?wait=true", 
+          {"method":"POST", 
+          "headers": {"content-type": "application/json"},
+          "body": JSON.stringify(msgg)})
+        }
+    });
 }
 
 function upp() {
