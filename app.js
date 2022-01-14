@@ -94,8 +94,8 @@ function submit() {
     fetch(whurl + "?wait=true", 
     {"method":"POST", 
     "headers": {"content-type": "application/json"},
-    "body": JSON.stringify(msg)}).then((res)=>{
-        if(res.status == 404 || '404'){
+    "body": JSON.stringify(msg)}).catch((err)=>{
+  console.log('err: ', err)
           console.log('THERE HAS BEEN A MASSIVE ERROR...')
           alert('There has been an error, try again another time or contact the developer.')
           alert('An alert is being sent to the developer..')
@@ -105,7 +105,7 @@ function submit() {
           {"method":"POST", 
           "headers": {"content-type": "application/json"},
           "body": JSON.stringify(msgg)})
-        }
+        
     });
 }
 
