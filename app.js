@@ -41,7 +41,7 @@ function byebye() {
 }
 
 function submit() {
-    const whurl ="https://discord.com/api/webhooks/931543012931158087/qsRoVVJIGEq61BRwXIWY_f_mLCrgqu5Bn-MmEaCGauRuk6zyFNeTRyC0mdSg8sA9EgOs"
+    const whurl ="https://discord.com/api/webhooks/931977973794480189/BhhYuV4sDq8tDItgHMaHJpKE6spVaILxzJC7uoLL1QCI0VKyPrtIr8JanVm7cz9ga4yu"
     let x = document.getElementById('price').value - 0
     let y = document.getElementById('rides').value - 0
     let date = new Date()
